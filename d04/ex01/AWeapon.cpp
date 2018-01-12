@@ -18,7 +18,7 @@ AWeapon &	AWeapon::operator=(AWeapon const & src) {
 	return *this;
 }
 
-std::string	AWeapon::getName() const {
+std::string const &	AWeapon::getName() const {
 	return this->_name;
 }
 
@@ -26,6 +26,6 @@ int			AWeapon::getAPCost() const {
 	return this->_apcost;
 }
 
-int			AWeapon::getAPDamage() const {
+int			AWeapon::getDamage() const {
 	return this->_damage;
 }

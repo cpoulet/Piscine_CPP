@@ -18,7 +18,7 @@ Character &	Character::operator=(Character const & src) {
 	return *this;
 }
 
-std::string		Character::getName() const {
+std::string	const &	Character::getName() const {
 	return this->_name;
 }
 
@@ -44,7 +44,7 @@ void			Character::attack(Enemy* e) {
 		return;
 	this->_ap -= this->_w->getAPCost();
 	this->_w->attack();
-	e->takeDamage(this->_w->getAPDamage());
+	e->takeDamage(this->_w->getDamage());
 	if (e->getHp() <= 0)
 		delete e;
 }

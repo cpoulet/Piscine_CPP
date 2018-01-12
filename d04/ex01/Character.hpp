@@ -18,7 +18,7 @@ public:
 	void				attack(Enemy*);
 	int					getAp() const;
 	AWeapon*			getWeapon() const;
-	std::string	virtual	getName() const;
+	std::string	const &	getName() const;
 
 private:
 
